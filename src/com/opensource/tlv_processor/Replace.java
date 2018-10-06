@@ -1,4 +1,4 @@
-package tlv_processor;
+package com.opensource.tlv_processor;
 
 public class Replace implements ProcessingType {
 	
