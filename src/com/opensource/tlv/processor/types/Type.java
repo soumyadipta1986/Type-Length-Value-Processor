@@ -1,5 +1,11 @@
-package com.opensource.tlv_processor;
-
+package com.opensource.tlv.processor.types;
+/**
+ * Copyright (c) 2018. Open source Project.
+ * 
+ * @author Soumyadipta Sarkar
+ * 
+ * Enum constant that defines valid Processing Types.
+ */
 public enum Type {
 	
 	UPPERCASE ("UPPRCS"),

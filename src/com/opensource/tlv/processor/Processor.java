@@ -1,10 +1,32 @@
-package com.opensource.tlv_processor;
+package com.opensource.tlv.processor;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import com.opensource.tlv.TypeLengthValue;
+import com.opensource.tlv.TypeLengthValueContext;
+import com.opensource.tlv.TypeLengthValueUtil;
+import com.opensource.tlv.processor.types.ProcessingType;
+import com.opensource.tlv.processor.types.Replace;
+import com.opensource.tlv.processor.types.UpperCase;
+
+/**
+ * Copyright (c) 2018. Open source Project.
+ * 
+ * @author Soumyadipta Sarkar
+ * 
+ * This is the outer most class that will be invoked by a client code. It has the capability to
+ * invoke appropriate ProcessingType for a Type Length Value instruction.
+ *  
+ * Assumption:
+ * All data in ASCII
+ * No malformed TLV
+ * 
+ * Client code is supposed to initiate only one instance of Processor. Then client code can take 
+ * TLV instructions from either StdIn or File and invoke process() method of Processor.
+ */
 public class Processor {
 	
 	private final Map<String, ProcessingType> processingTypes;

@@ -1,5 +1,15 @@
-package com.opensource.tlv_processor;
+package com.opensource.tlv;
 
+import com.opensource.tlv.processor.types.Type;
+
+/**
+ * Copyright (c) 2018. Open source Project.
+ * 
+ * @author Soumyadipta Sarkar
+ * 
+ * TypeLengthValue is an immutable class that represents a TLV instruction.
+ *
+ */
 public class TypeLengthValue {
 	
 	private final Type type;
@@ -22,6 +32,11 @@ public class TypeLengthValue {
 
 	public String getValue() {
 		return value;
+	}
+	
+	@Override
+	public String toString() {
+		return "[Type: " + type + ", Length: " + length + ", Value: " + value + "]";
 	}
 	
 }
